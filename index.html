@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ZAIKA - Best Restaurant</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="toast">Added to Cart ✓</div>
+<nav><h1>ZAIKA.</h1><div class="nav-links"><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a></div><button id="cartBtn">🛒 Cart (<span id="cartCount">0</span>)</button></nav>
+
+<section class="hero">
+<div class="hero-text"><span>🔥 FREE DELIVERY TODAY</span><h1>Delicious Food<br>Delivered Fast.</h1><p>Fresh, hot, and tasty food in 30 minutes. 2000+ Happy Customers.</p><a href="#menu" class="btn-order">View Menu →</a></div>
+<div class="hero-img"><div>🍔</div><h3>Burger Special</h3><p>Most Selling Item</p></div>
+</section>
+
+<section id="menu" class="menu-section">
+<h2>Our Best Selling Dishes</h2>
+<div class="filter-btns"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="burger">Burgers</button><button class="filter" data-filter="pizza">Pizza</button><button class="filter" data-filter="desi">Desi</button></div>
+<div class="grid-3">
+<div class="food-card" data-cat="burger"><div class="food-emoji">🍔</div><h4>Zinger Burger</h4><p>Cheesy & Crispy</p><div class="price-row"><b>Rs. 650</b><button onclick="addToCart('Zinger Burger',650)">Add +</button></div></div>
+<div class="food-card" data-cat="burger"><div class="food-emoji">🍔</div><h4>Beef Burger</h4><p>Double Patty</p><div class="price-row"><b>Rs. 850</b><button onclick="addToCart('Beef Burger',850)">Add +</button></div></div>
+<div class="food-card" data-cat="pizza"><div class="food-emoji">🍕</div><h4>Fajita Pizza</h4><p>Large 12 inch</p><div class="price-row"><b>Rs. 1450</b><button onclick="addToCart('Fajita Pizza',1450)">Add +</button></div></div>
+<div class="food-card" data-cat="pizza"><div class="food-emoji">🍕</div><h4>Cheese Pizza</h4><p>Extra Cheese</p><div class="price-row"><b>Rs. 1200</b><button onclick="addToCart('Cheese Pizza',1200)">Add +</button></div></div>
+<div class="food-card" data-cat="desi"><div class="food-emoji">🍗</div><h4>Chicken Biryani</h4><p>Special Zaika</p><div class="price-row"><b>Rs. 450</b><button onclick="addToCart('Biryani',450)">Add +</button></div></div>
+<div class="food-card" data-cat="desi"><div class="food-emoji">🥘</div><h4>Chicken Karahi</h4><p>Half KG</p><div class="price-row"><b>Rs. 1100</b><button onclick="addToCart('Karahi',1100)">Add +</button></div></div>
+</div>
+</section>
+
+<section id="gallery" class="gallery-section"><h2>Food Gallery</h2><div class="gallery-grid"><div class="g-box">🍕</div><div class="g-box">🍔</div><div class="g-box">🍗</div><div class="g-box">🥘</div><div class="g-box">🍟</div><div class="g-box">🌯</div></div></section>
+
+<section id="reviews" class="review-section"><h2>What Our Customers Say</h2><div class="grid-3"><div class="review-card"><p>⭐⭐⭐⭐⭐</p><p>"Best burger in Lahore! Delivery bohat fast hai."</p><b>- Ahmed, DHA</b></div><div class="review-card"><p>⭐⭐⭐⭐⭐</p><p>"Pizza is amazing, cheese full tha. Will order again."</p><b>- Sara, Gulberg</b></div><div class="review-card"><p>⭐⭐⭐⭐⭐</p><p>"Biryani ka taste ghar jaisa, highly recommended."</p><b>- Bilal, Johar Town</b></div></div></section>
+
+<section class="about-section"><div><h2>We Make Food With Love ❤️</h2><p>Since 2015, ZAIKA is serving best food in Lahore. 100% Halal, Fresh Ingredients.</p><ul><li>✓ 30 Mins Delivery</li><li>✓ 2000+ 5-Star Reviews</li><li>✓ Cash on Delivery</li></ul></div><div class="about-box"><h3>Opening Hours</h3><p>Mon - Sun: 11am - 2am</p><h3 style="margin-top:15px">Visit Us</h3><p>DHA Phase 6, Lahore</p><p>📞 0300-0000000</p></div></section>
+
+<div id="cartModal" class="cart-modal"><div class="cart-content"><div class="cart-head"><h3>Your Order</h3><span id="closeCart">✕</span></div><div id="cartItems">Cart is empty</div><div class="cart-total">Total: Rs. <span id="totalPrice">0</span></div><input id="custName" placeholder="Your Name" style="width:100%;padding:12px;border-radius:10px;border:1px solid #ddd;margin-bottom:10px"><input id="custAddress" placeholder="Your Address" style="width:100%;padding:12px;border-radius:10px;border:1px solid #ddd;margin-bottom:10px"><button id="checkoutBtn" class="btn-checkout">Order on WhatsApp →</button></div></div>
+
+<footer>© 2026 ZAIKA Restaurant | Made for Portfolio by NEXA Agency</footer>
+<script src="script.js"></script>
+</body>
+</html>

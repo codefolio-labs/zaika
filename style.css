@@ -1,0 +1,35 @@
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui;background:#fff9f3;color:#111}
+#toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#111;color:white;padding:10px 20px;border-radius:30px;font-size:13px;display:none;z-index:999}
+#toast.show{display:block}
+nav{display:flex;justify-content:space-between;align-items:center;padding:15px 5%;background:white;position:sticky;top:0;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.nav-links a{margin-right:10px;text-decoration:none;color:white;background:#ff5a00;padding:8px 18px;border-radius:20px;font-weight:600;font-size:14px}
+#cartBtn{background:#111;color:white;padding:10px 18px;border-radius:30px;border:none;cursor:pointer}
+.hero{display:grid;grid-template-columns:1.2fr 0.8fr;align-items:center;padding:50px 5%;gap:20px;background:#fff9f3}
+.hero-text span{background:#ffeadb;color:#ff5a00;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700}
+.hero-text h1{font-size:56px;line-height:0.95;margin:15px 0;font-weight:800}.hero-text p{color:#888;margin-bottom:20px}.btn-order{background:#ff5a00;color:white;padding:14px 28px;border-radius:30px;text-decoration:none;display:inline-block;font-weight:700}
+.hero-img{background:white;border-radius:30px;height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 20px 40px rgba(0,0,0,0.08);text-align:center}.hero-img div{font-size:70px}
+.menu-section{padding:50px 5%}.menu-section h2{font-size:36px;font-weight:800;margin-bottom:15px}
+.filter-btns{display:flex;gap:10px;margin-bottom:25px}.filter{padding:8px 18px;border-radius:20px;border:1px solid #ddd;background:white;cursor:pointer}.filter.active{background:black;color:white}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.food-card{background:white;border:1px solid #eee;padding:18px;border-radius:20px;transition:0.2s}.food-card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,0.05)}
+.food-emoji{font-size:40px;background:#fff9f3;width:60px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:15px;margin-bottom:10px}
+.price-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px}.price-row button{background:#111;color:white;border:none;padding:7px 14px;border-radius:20px;cursor:pointer}
+.about-section{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;padding:50px 5%;background:white;margin:40px 5%;border-radius:30px}.about-section ul{list-style:none;margin-top:15px}.about-section li{margin:6px 0}
+.about-box{background:#fff9f3;padding:25px;border-radius:20px}
+.cart-modal{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;justify-content:flex-end;z-index:100}.cart-modal.show{display:flex}
+.cart-content{background:white;width:360px;padding:20px;height:100%;overflow:auto}.cart-head{display:flex;justify-content:space-between;margin-bottom:15px}#closeCart{cursor:pointer}
+#cartItems div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #eee;font-size:14px}
+.cart-total{font-weight:800;margin:15px 0;font-size:18px}.btn-checkout{width:100%;background:#25D366;color:white;border:none;padding:14px;border-radius:30px;font-weight:700;cursor:pointer}
+footer{text-align:center;padding:25px;background:#111;color:#888;font-size:13px;margin-top:30px}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.grid-3,.about-section{grid-template-columns:1fr}.hero-text h1{font-size:36px}}
+
+.gallery-section{padding:40px 5%}.gallery-section h2{font-size:32px;font-weight:800;margin-bottom:20px}
+.gallery-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.g-box{background:white;border:1px solid #eee;height:90px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:32px}
+.review-section{padding:50px 5%;background:white;margin:40px 5%;border-radius:30px}.review-section h2{font-size:32px;font-weight:800;margin-bottom:20px}
+.review-card{background:#fff9f3;padding:18px;border-radius:18px;border:1px solid #ffeadb}.review-card p{font-size:14px;margin:6px 0;color:#333}.review-card b{font-size:12px;color:#888}
+@media(max-width:700px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* --- FIX FOR GAP ISSUE --- */
+html{scroll-behavior:smooth}
+section{scroll-margin-top:70px; padding-top:70px !important; padding-bottom:70px !important; min-height:70vh}
+#menu, #gallery, #reviews, .about-section{margin-top:50px !important; border-top:1px solid #ffeadb}
